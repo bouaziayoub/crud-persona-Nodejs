@@ -1,0 +1,18 @@
+npm i sqlite3
+
+npm install express better-sqlite3
+
+
+CREATE TABLE products (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    price INTEGER
+);
+
+
+CREATE TABLE categories (
+     id INTEGER PRIMARY KEY AUTOINCREMENT,
+     name TEXT,
+     product_id INTEGER,
+     FOREIGN KEY (product_id) REFERENCES products (id)
+);
